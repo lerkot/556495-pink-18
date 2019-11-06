@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Валерия Жидких](https://up.htmlacademy.ru/adaptive/18/user/556495).
-* Наставник: [Алёна Сиприкова] (https://htmlacademy.ru/profile/asiprikova).
+* Наставник: [Алёна Сиприкова](https://htmlacademy.ru/profile/asiprikova).
 
 ---
 
