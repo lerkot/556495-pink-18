@@ -157,54 +157,33 @@
           <div class="photoeditor__form-wrapper">
             <img class="photoeditor__form-image" src="https://via.placeholder.com/150x150" width="280" height="374"
               alt="Ваше фото">
-            <div class="photoeditor__form-tools">
-              <div class="photoeditor__tool photoeditor__tool--crop">
-                <button class="photoeditor__button photoeditor__button--crop photoeditor__button--active" type="button"
-                  aria-label="Обрезать фото">
-                  <img class="photoeditor__button-icon" src="https://via.placeholder.com/150x150" width="47" height="44"
-                    alt="Обрезать фото">
-                </button>
-                <div class="photoeditor__tool-controls">
-                  <div class="photoeditor__tool-scale">
-                    <div class="photoeditor__scale-bar"></div>
-                    <button class="photoeditor__scale-button" type="button"></button>
-                  </div>
-                </div>
-              </div>
-              <div class="photoeditor__tool photoeditor__tool--fill">
-                <button class="photoeditor__button photoeditor__button--fill" type="button"
-                  aria-label="Сделать заливку фото">
-                  <img class="photoeditor__button-icon" src="https://via.placeholder.com/150x150" width="47" height="44"
-                    alt="Заливка фото">
-                </button>
-                <div class="photoeditor__tool-controls">
-                  <div class="photoeditor__tool-scale">
-                    <div class="photoeditor__scale-bar"></div>
-                    <button class="photoeditor__scale-button" type="button"></button>
-                  </div>
-                </div>
-              </div>
-              <div class="photoeditor__tool photoeditor__tool--brightness">
-                <button class="photoeditor__button photoeditor__button--brightness" type="button"
-                  aria-label="Изменить яркость">
-                  <img class="photoeditor__button-icon" src="https://via.placeholder.com/150x150" width="47" height="44"
-                    alt="Изменение яркости">
-                </button>
-                <div class="photoeditor__tool-controls">
-                  <div class="photoeditor__tool-scale">
-                    <div class="photoeditor__scale-bar"></div>
-                    <button class="photoeditor__scale-button" type="button"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="photoeditor__form-actions">
-              <input class="photoeditor__action-button photoeditor__action-button--submit" type="submit"
-                value="Запостить">
-              <input class="photoeditor__action-button photoeditor__action-button--reset" type="reset" value="Отмена">
+            <div class="photoeditor__form-filters">
+              <fieldset class="photoeditor__filters">
+                <label class="photoeditor__filter-label photoeditor__filter-label--active" for="crop">
+                  <input class="photoeditor__filter photoeditor__filter--crop photoeditor__filter--active"
+                    type="checkbox" name="filters-group" id="crop">
+                </label>
+                <input class="photoeditor__filter-range" type="range" name="range-group">
+                <label class="photoeditor__filter-label" for="fill">
+                  <input class="photoeditor__filter photoeditor__filter--fill" type="checkbox" name="filters-group"
+                    id="fill">
+                </label>
+                <input class="photoeditor__filter-range" type="range" name="range-group">
+                <label class="photoeditor__filter-label" for="brightness">
+                  <input class="photoeditor__filter photoeditor__filter--brightness" type="checkbox"
+                    name="filters-group" id="brightness">
+                </label>
+                <input class="photoeditor__filter-range" type="range" name="range-group">
+              </fieldset>
             </div>
           </div>
-        </form>
+          <div class="photoeditor__form-actions">
+            <input class="photoeditor__action-button photoeditor__action-button--submit" type="submit"
+              value="Запостить">
+            <input class="photoeditor__action-button photoeditor__action-button--reset" type="reset" value="Отмена">
+          </div>
+      </div>
+      </form>
       </div>
     </article>
   </main>
