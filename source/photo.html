@@ -146,6 +146,46 @@
         </article>
       </div>
     </section>
+    <article class="photoeditor">
+      <h2 class="visually-hidden">Отредактируй и опубликуй фотографию</h2>
+      <div class="photoeditor__inner inner">
+        <p class="photoeditor__lead">
+          Затмите их всех!
+          Выкладывайте все, что накопилось в телефоне!
+        </p>
+        <form class="photoeditor__form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="photoeditor__form-wrapper">
+            <img class="photoeditor__form-image" src="https://via.placeholder.com/150x150" width="280" height="374"
+              alt="Ваше фото">
+            <div class="photoeditor__form-filters">
+              <fieldset class="photoeditor__filters">
+                <label class="photoeditor__filter-label photoeditor__filter-label--active" for="crop">
+                  <input class="photoeditor__filter photoeditor__filter--crop photoeditor__filter--active"
+                    type="checkbox" name="filters-group" id="crop">
+                </label>
+                <input class="photoeditor__filter-range" type="range" name="range-group">
+                <label class="photoeditor__filter-label" for="fill">
+                  <input class="photoeditor__filter photoeditor__filter--fill" type="checkbox" name="filters-group"
+                    id="fill">
+                </label>
+                <input class="photoeditor__filter-range" type="range" name="range-group">
+                <label class="photoeditor__filter-label" for="brightness">
+                  <input class="photoeditor__filter photoeditor__filter--brightness" type="checkbox"
+                    name="filters-group" id="brightness">
+                </label>
+                <input class="photoeditor__filter-range" type="range" name="range-group">
+              </fieldset>
+            </div>
+          </div>
+          <div class="photoeditor__form-actions">
+            <input class="photoeditor__action-button photoeditor__action-button--submit" type="submit"
+              value="Запостить">
+            <input class="photoeditor__action-button photoeditor__action-button--reset" type="reset" value="Отмена">
+          </div>
+      </div>
+      </form>
+      </div>
+    </article>
   </main>
   <footer class="footer">
     <div class="footer__inner inner">
