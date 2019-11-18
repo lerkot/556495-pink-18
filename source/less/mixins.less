@@ -1,0 +1,38 @@
+.intro-headings() {
+  margin: 0;
+  font-family: @font-family;
+  font-size: @fs-main-heading;
+  font-weight: @fw-light;
+  color: @white;
+}
+
+.nav-links() {
+  font-family: @font-family;
+  font-size: @fs-subtitle;
+  font-weight: @fw-bold;
+  line-height: @lh-large;
+  color: @white;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: @pink;
+  }
+
+  &:active {
+    color: rgba(@pink, 0.3);
+  }
+}
+
+.buttons() {
+  font-family: @font-family;
+  font-size: @fs-subtitle;
+  font-weight: @fw-bold;
+  line-height: @lh-small;
+}
+
+.lists {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
