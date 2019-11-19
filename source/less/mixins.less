@@ -1,37 +1,37 @@
-.intro-headings() {
+.intro-headings-mixin() {
   margin: 0;
   font-family: @font-family;
   font-size: @fs-main-heading;
   font-weight: @fw-light;
-  color: @white;
+  color: @secondary-color;
 }
 
-.nav-links() {
+.nav-links-mixin() {
   font-family: @font-family;
   font-size: @fs-subtitle;
   font-weight: @fw-bold;
   line-height: @lh-large;
-  color: @white;
+  color: @secondary-color;
   text-transform: uppercase;
 
   &:hover,
   &:focus {
-    color: @pink;
+    color: @accent-color;
   }
 
   &:active {
-    color: rgba(@pink, 0.3);
+    color: rgba(@accent-color, 0.3);
   }
 }
 
-.buttons() {
+.buttons-mixin() {
   font-family: @font-family;
   font-size: @fs-subtitle;
   font-weight: @fw-bold;
   line-height: @lh-small;
 }
 
-.lists {
+.lists-mixin {
   margin: 0;
   padding: 0;
   list-style: none;
