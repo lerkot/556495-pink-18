@@ -1,0 +1,38 @@
+.intro-headings-mixin() {
+  margin: 0;
+  font-family: @font-family;
+  font-size: @fs-main-heading;
+  font-weight: @fw-light;
+  color: @secondary-color;
+}
+
+.nav-links-mixin() {
+  font-family: @font-family;
+  font-size: @fs-subtitle;
+  font-weight: @fw-bold;
+  line-height: @lh-large;
+  color: @secondary-color;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: @accent-color;
+  }
+
+  &:active {
+    color: rgba(@accent-color, 0.3);
+  }
+}
+
+.buttons-mixin() {
+  font-family: @font-family;
+  font-size: @fs-subtitle;
+  font-weight: @fw-bold;
+  line-height: @lh-small;
+}
+
+.lists-mixin() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

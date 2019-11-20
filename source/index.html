@@ -3,17 +3,33 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <title>Пинк</title>
+  <link href="./css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="header">
     <div class="header__inner inner">
-      <a class="header__logo-link">
-        <img class="header__logo-image" src="https://via.placeholder.com/150x150" width="75" height="22"
-          alt="Приложение «Пинк»">
-      </a>
-      <button class="header__toggle visually-hidden" type="button">Закрыть меню</button>
+      <div class="header__logo-wrapper">
+        <a class="header__logo-link">
+          <svg fill="currentColor" class="header__logo-image" version="1.0" id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="75"
+            height="22" viewBox="0 0 75 22" enable-background="new 0 0 74.426 22.859" xml:space="preserve">
+            <g>
+              <path
+                d="M0,1.449c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.147v0.064 c0,4.861-4.057,7.373-8.854,7.373H2.544v6.825c0,0.708-0.58,1.288-1.288,1.288C0.58,22.859,0,22.279,0,21.571V1.449z M8.114,12.428 c3.734,0,6.182-1.996,6.182-4.958V7.405c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917H8.114z" />
+              <path
+                d="M21.729,1.288C21.729,0.58,22.308,0,22.983,0c0.709,0,1.288,0.58,1.288,1.288v20.283 c0,0.708-0.579,1.288-1.288,1.288c-0.676,0-1.255-0.58-1.255-1.288V1.288z" />
+              <path
+                d="M30.87,1.32c0-0.676,0.579-1.256,1.256-1.256h0.354c0.58,0,0.934,0.29,1.288,0.74l13.684,17.45V1.256 C47.451,0.58,47.998,0,48.707,0c0.676,0,1.223,0.58,1.223,1.256v20.348c0,0.676-0.482,1.191-1.158,1.191h-0.129 c-0.548,0-0.934-0.322-1.32-0.772L33.349,4.153v17.45c0,0.676-0.547,1.256-1.255,1.256c-0.677,0-1.224-0.58-1.224-1.256V1.32z" />
+              <path
+                d="M56.3,1.288C56.3,0.58,56.879,0,57.556,0c0.708,0,1.287,0.58,1.287,1.288v12.331L71.689,0.451 C71.979,0.193,72.269,0,72.688,0c0.676,0,1.224,0.612,1.224,1.256c0,0.354-0.161,0.644-0.419,0.901l-7.984,7.92l8.564,10.561 c0.225,0.29,0.354,0.547,0.354,0.934c0,0.676-0.579,1.288-1.287,1.288c-0.483,0-0.806-0.258-1.03-0.58l-8.403-10.463l-4.862,4.861 v4.894c0,0.708-0.579,1.288-1.287,1.288c-0.677,0-1.256-0.58-1.256-1.288V1.288z" />
+            </g>
+          </svg>
+        </a>
+        <button class="header__toggle visually-hidden" type="button">Закрыть меню</button>
+      </div>
       <nav class="header__nav">
         <ul class="header__nav-list">
           <li class="header__nav-item">
@@ -35,20 +51,19 @@
   <main class="main">
     <section class="intro">
       <div class="intro__inner inner">
-        <h1 class="intro__heading">Взгляните на жизнь
+        <h1 class="intro__heading intro__heading--index">Взгляните на жизнь
           иначе!</h1>
         <div class="intro__app">
           <a class="intro__app-download" href="https://apps.apple.com/ru/genre/ios/id36">Скачать приложение</a>
           <ul class="intro__app-list">
             <li class="intro__app-item">
               <a class="intro__app-link intro__app-link--ios" href="https://apps.apple.com/ru/genre/ios/id36">
-                <span class="visually-hidden">Скачать «Пинк» в AppStore</span>
+                <span class="visually-hidden">Скачать «Пинк» в App Store</span>
               </a>
             </li>
             <li class="intro__app-item">
               <a class="intro__app-link intro__app-link--android" href="https://play.google.com/store/">
                 <span class="visually-hidden">Скачать «Пинк» в Google Play</span>
-              </a>
             </li>
             <li class="intro__app-item">
               <a class="intro__app-link intro__app-link--windows" href="https://www.microsoft.com/store/apps">
@@ -66,25 +81,26 @@
         <p class="advantages__slogan">Устали от серости мегаполиса?</p>
         <p class="advantages__slogan">Нам есть, что вам
           предложить!</p>
-        <ul class="advantages__list">
-          <li class="advantages__item">
-            <h3 class="advantages__title">Поднимает настроение</h3>
-            <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в
-              несколько кликов!</p>
-          </li>
-          <li class="advantages__item">
-            <h3 class="advantages__title">Меняет мир вокруг</h3>
-            <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы
-              усилить эффект</p>
-          </li>
-          <li class="advantages__item">
-            <h3 class="advantages__title">Заводит новых друзей</h3>
-            <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите
-              новых</p>
-            <img class="advantages__img advantages__img--photo" src="https://via.placeholder.com/150x150" width="150"
-              height="150" alt="Возможности приложения">
-          </li>
-        </ul>
+        <div class="advantages__list-wrapper">
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <h3 class="advantages__title">Поднимает настроение</h3>
+              <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в
+                несколько кликов!</p>
+            </li>
+            <li class="advantages__item">
+              <h3 class="advantages__title">Меняет мир вокруг</h3>
+              <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы
+                усилить эффект</p>
+            </li>
+            <li class="advantages__item">
+              <h3 class="advantages__title">Заводит новых друзей</h3>
+              <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и
+                заводите
+                новых</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
     <section class="reviews">
@@ -214,7 +230,7 @@
     <section class="contacts">
       <div class="contacts__inner inner">
         <div class="contacts__list-wrapper">
-          <h2>Остались вопросы?
+          <h2 class="contacts__heading">Остались вопросы?
             Свяжитесь с нами!</h2>
           <ul class="contacts__list">
             <li class="contacts__item">

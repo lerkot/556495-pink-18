@@ -1,0 +1,30 @@
+.header {
+  background-color: @secondary-bg-color;
+}
+
+.header__logo-wrapper {
+  padding-top: 22px;
+  padding-left: 20px;
+  padding-bottom: 18px;
+  box-shadow: 0 1px #000000;
+}
+
+.header__logo-image {
+  width: 75px;
+  height: 22px;
+}
+
+.header__nav-list {
+  .lists-mixin();
+}
+
+.header__nav-item {
+  padding: 16px;
+  box-shadow:
+    0 1px 0 #000000,
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.header__nav-link {
+  .nav-links-mixin();
+}
