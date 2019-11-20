@@ -4,3 +4,29 @@
   line-height: @lh-big;
   color: @secondary-color;
 }
+
+.photoeditor__form {
+  background-color: @block-bg-color;
+}
+
+.photoeditor__filters {
+  border: none;
+}
+
+.photoeditor__action-button {
+  .buttons-mixin();
+  background-color: transparent;
+  border: none;
+}
+
+.photoeditor__action-button--submit {
+  color: @accent-color;
+  border: @border-button @accent-color;
+  border-radius: @border-radius;
+}
+
+.photoeditor__action-button--reset {
+  color: rgba(@main-color, 0.1);
+  border: @border-button rgba(@main-color, 0.1);
+  border-radius: @border-radius;
+}

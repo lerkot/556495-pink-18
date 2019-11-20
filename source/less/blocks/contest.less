@@ -1,6 +1,74 @@
 .contest__form-lead {
-  color: @main-color;
   font-size: @fs-base;
   font-weight: @fw-regular;
   line-height: @lh-big;
+  color: @main-color;
+}
+
+.contest__fields {
+  border: none;
+}
+
+.contest__fields--secondary {
+  background-color: @block-bg-color;
+}
+
+.contest__legend {
+  font-size: @fs-base;
+  font-weight: @fw-regular;
+  line-height: @lh-small;
+  text-transform: uppercase;
+  color: @accent-color;
+  border: none;
+}
+
+.contest__input::placeholder {
+  font-family: @font-family;
+  font-size: @fs-subtitle;
+  font-weight: @fw-regular;
+  line-height: @lh-big;
+  color: @main-color;
+}
+
+.contest__textarea::placeholder {
+  font-family: @font-family;
+  font-size: @fs-subtitle;
+  font-weight: @fw-regular;
+  line-height: @lh-big;
+  color: @main-color;
+}
+
+.contest__label {
+  font-size: @fs-subtitle;
+  font-weight: @fw-regular;
+  line-height: @lh-big;
+  color: @main-color;
+}
+
+.contest__label--accent {
+  font-size: @fs-base;
+  font-weight: @fw-regular;
+  line-height: @lh-big;
+  text-transform: uppercase;
+  color: @accent-color;
+}
+
+.contest__form-button {
+  .buttons-mixin();
+  color: @secondary-color;
+  text-transform: uppercase;
+  background-color: @button-bg-color;
+  border: none;
+}
+
+.contest__form-notice {
+  font-size: @fs-base;
+  font-weight: @fw-regular;
+  line-height: @lh-big;
+  text-transform: uppercase;
+  color: @main-color;
+
+  .contest__form-notice-star {
+    color: @accent-color;
+  }
 }
