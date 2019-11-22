@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <title>Пинк</title>
   <link href="./css/style.css" rel="stylesheet">
 </head>
@@ -65,12 +66,12 @@
             заполните форму ниже:
           </p>
           <fieldset class="contest__fields contest__fields--primary">
-            <label class="contest__label contest__label--accent-color contest__label--uppercase"
+            <label class="contest__label contest__label--accent"
               for="surname">Фамилия:</label>
             <input class="contest__input" id="surname" type="text" name="surname" placeholder="Укажите фамилию *">
-            <label class="contest__label contest__label--accent-color contest__label--uppercase" for="name">Имя:</label>
+            <label class="contest__label contest__label--accent" for="name">Имя:</label>
             <input class="contest__input" id="name" type="text" name="name" placeholder="Введите ваше имя *">
-            <label class="contest__label contest__label--accent-color contest__label--uppercase"
+            <label class="contest__label contest__label--accent"
               for="middle-name">Отчество:</label>
             <input class="contest__input" id="middle-name" type="text" name="middle-name"
               placeholder="Ну и отчество тоже">
@@ -94,11 +95,11 @@
             <label class="contest__label" for="hotel">Разгромил отель</label>
           </fieldset>
           <fieldset class="contest__fields contest__fields--primary">
-            <label class="contest__label contest__label--accent-color contest__label--uppercase" for="tel">Номер
+            <label class="contest__label contest__label--accent" for="tel">Номер
               телефона</label>
             <input class="contest__input" id="tel" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone-number"
               placeholder="Номер, пожалуйста" required>
-            <label class="contest__label contest__label--accent-color contest__label--uppercase" for="email">Адрес
+            <label class="contest__label contest__label--accent" for="email">Адрес
               почты</label>
             <input class="contest__input" id="email" type="email" name="email" placeholder="Введите почту *" required>
           </fieldset>
@@ -121,7 +122,7 @@
           </fieldset>
           <button class="contest__form-button" type="submit">Отправить форму</button>
           <p class="contest__form-notice">
-            * — обязательные поля
+            <span class="contest__form-notice-star">*</span> — обязательные поля
           </p>
         </form>
       </div>

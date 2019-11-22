@@ -1,3 +1,36 @@
 .contacts {
   background-color: @base-bg-color;
 }
+
+.contacts__heading {
+  font-size: @fs-main-heading;
+  font-weight: @fw-light;
+  color: @main-color;
+}
+
+.contacts__list {
+  .lists-mixin();
+}
+
+.contacts__item-title {
+  font-size: @fs-subtitle;
+  font-weight: @fw-bold;
+  color: @main-color;
+}
+
+.contacts__item-tel {
+  .contacts-links-mixin();
+}
+
+.contacts__item-email {
+  .contacts-links-mixin();
+}
+
+.contacts__item-address {
+  .contacts-links-mixin();
+}
+
+.contacts__map-body {
+  width: 100%;
+  border: none;
+}
