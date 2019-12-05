@@ -1,16 +1,54 @@
+.contest__form {
+  display: flex;
+  flex-direction: column;
+}
+
 .contest__form-lead {
   font-size: @fs-base;
   font-weight: @fw-regular;
   line-height: @lh-big;
   color: @main-color;
+  text-align: center;
+}
+
+.contest__form-lead--hidden {
+  display: none;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .contest__form-lead--hidden {
+    display: inline-block;
+  }
 }
 
 .contest__fields {
+  margin: 0;
+  padding: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
   border: none;
 }
 
+@media (min-width: @breakpoint-tablet) {
+  .contest__fields {
+    width: 100%;
+  }
+}
+
 .contest__fields--secondary {
+  width: 100%;
   background-color: @block-bg-color;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .contest__fields--secondary {
+    background-color: @base-bg-color;
+  }
+}
+
+.contest__fields-inner {
+  display: flex;
+  flex-direction: column;
 }
 
 .contest__legend {
@@ -22,12 +60,45 @@
   border: none;
 }
 
+@media (min-width: @breakpoint-tablet) {
+  .contest__legend {
+    border: @border-input @border-color;
+  }
+}
+
+.contest__filters,
+.contest__name-list {
+  .lists-mixin();
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .contest__name-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 55px;
+  }
+}
+
+.contest__input[type="text"],
+.contest__input[type="tel"],
+.contest__input[type="email"] {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
 .contest__input::placeholder {
   font-family: @font-family;
   font-size: @fs-subtitle;
   font-weight: @fw-regular;
   line-height: @lh-big;
   color: @main-color;
+}
+
+.contest__textarea {
+  width: 100%;
 }
 
 .contest__textarea::placeholder {
@@ -45,6 +116,12 @@
   color: @main-color;
 }
 
+@media (min-width: @breakpoint-tablet) {
+  .contest__label {
+    margin-right: 22px;
+  }
+}
+
 .contest__label--accent {
   font-size: @fs-base;
   font-weight: @fw-regular;
@@ -55,6 +132,8 @@
 
 .contest__form-button {
   .buttons-mixin();
+  display: block;
+  margin: 0 auto;
   color: @secondary-color;
   text-transform: uppercase;
   background-color: @button-bg-color;
@@ -67,6 +146,7 @@
   line-height: @lh-big;
   text-transform: uppercase;
   color: @main-color;
+  text-align: center;
 
   .contest__form-notice-star {
     color: @accent-color;

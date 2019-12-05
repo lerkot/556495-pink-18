@@ -4,9 +4,7 @@
 
 .header__logo-wrapper {
   padding-top: 22px;
-  padding-left: 20px;
   padding-bottom: 18px;
-  box-shadow: 0 1px #000000;
 }
 
 .header__logo-image {
@@ -16,15 +14,49 @@
   fill: currentColor;
 }
 
+@media (min-width: @breakpoint-tablet) {
+  .header__logo-wrapper {
+    min-height: 110px;
+  }
+
+  .header__logo-image {
+    width: 147px;
+    height: 40px;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .header__logo-image {
+    width: 147px;
+    height: 40px;
+  }
+
+  .header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 670px;
+  }
+
+  .header__nav-item:last-of-type {
+    padding-right: 0;
+  }
+}
+
 .header__nav-list {
   .lists-mixin();
 }
 
 .header__nav-item {
   padding: 16px;
-  box-shadow:
-    0 1px 0 #000000,
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  text-align: center;
 }
 
 .header__nav-link {
