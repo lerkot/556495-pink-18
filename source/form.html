@@ -13,9 +13,9 @@
     <div class="header__inner inner">
       <div class="header__logo-wrapper">
         <a class="header__logo-link" href="index.html">
-          <svg class="header__logo-image" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="75"
-            height="22" viewBox="0 0 75 22" enable-background="new 0 0 74.426 22.859" xml:space="preserve">
+          <svg class="header__logo-image" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="75" height="22" viewBox="0 0 75 22"
+            enable-background="new 0 0 74.426 22.859" xml:space="preserve">
             <g>
               <path
                 d="M0,1.449c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.147v0.064 c0,4.861-4.057,7.373-8.854,7.373H2.544v6.825c0,0.708-0.58,1.288-1.288,1.288C0.58,22.859,0,22.279,0,21.571V1.449z M8.114,12.428 c3.734,0,6.182-1.996,6.182-4.958V7.405c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917H8.114z" />
@@ -59,111 +59,128 @@
         Заполните форму для участия в конкурсе
       </h2>
       <form class="contest__form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="inner">
-          <p class="contest__form-lead">
-            Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
-            <span class="contest__form-lead contest__form-lead--hidden">
-              Пожалуйста,
-              заполните форму ниже:
-            </span>
-          </p>
+        <div class="contest__wrapper contest__wrapper--lead">
+          <div class="inner">
+            <p class="contest__form-lead">
+              Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+              <span class="contest__form-lead contest__form-lead--hidden">
+                Пожалуйста,
+                заполните форму ниже:
+              </span>
+            </p>
+          </div>
         </div>
-        <fieldset class="contest__fields contest__fields--primary">
-          <div class="contest__fields-inner inner">
-            <ul class="contest__name-list">
-              <li class="contest__name-item">
-                <label class="contest__label contest__label--accent" for="surname">Фамилия:</label>
-                <input class="contest__input" id="surname" type="text" name="surname" placeholder="Укажите фамилию *">
-              </li>
-              <li class="contest__name-item">
-                <label class="contest__label contest__label--accent" for="name">Имя:</label>
-                <input class="contest__input" id="name" type="text" name="name" placeholder="Введите ваше имя *"></li>
-              <li class="contest__name-item">
-                <label class="contest__label contest__label--accent" for="middle-name">Отчество:</label>
-                <input class="contest__input" id="middle-name" type="text" name="middle-name"
-                  placeholder="Ну и отчество тоже">
-              </li>
-            </ul>
-          </div>
-        </fieldset>
-        <fieldset class="contest__fields contest__fields--secondary">
-          <legend class="contest__legend inner">
-            Ваши безбашенные достижения в путешествии
-          </legend>
-          <div class="inner">
-            <ul class="contest__filters">
-              <li class="contest__filters-item">
-                <input class="contest__input" type="checkbox" name="achievements" id="selfi" checked>
-                <label class="contest__label" for="selfi">Сделал селфи с акулой</label>
-              </li>
-              <li class="contest__filters-item">
-                <input class="contest__input" type="checkbox" name="achievements" id="beach" checked>
-                <label class="contest__label" for="beach">Обгорел на пляже</label>
-              </li>
-              <li class="contest__filters-item">
-                <input class="contest__input" type="checkbox" name="achievements" id="chuck">
-                <label class="contest__label" for="chuck">Видел Чака Норриса</label>
-              </li>
-              <li class="contest__filters-item">
-                <input class="contest__input" type="checkbox" name="achievements" id="souvenirs">
-                <label class="contest__label" for="souvenirs">Накупил сувениров</label>
-              </li>
-              <li class="contest__filters-item">
-                <input class="contest__input" type="checkbox" name="achievements" id="tower" checked>
-                <label class="contest__label" for="tower">Удержал башню</label>
-              </li>
-              <li class="contest__filters-item">
-                <input class="contest__input" type="checkbox" name="achievements" id="hotel">
-                <label class="contest__label" for="hotel">Разгромил отель</label>
-              </li>
-            </ul>
-          </div>
-        </fieldset>
-        <fieldset class="contest__fields contest__fields--primary">
-          <div class="inner">
-            <label class="contest__label contest__label--accent" for="tel">Номер
-              телефона</label>
-            <input class="contest__input" id="tel" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone-number"
-              placeholder="Номер, пожалуйста" required>
-            <label class="contest__label contest__label--accent" for="email">Адрес
-              почты</label>
-            <input class="contest__input" id="email" type="email" name="email" placeholder="Введите почту *" required>
-          </div>
-        </fieldset>
-        <fieldset class="contest__fields contest__fields--secondary">
-          <legend class="contest__legend inner">С каким приложением
-            путешествовали?</legend>
+          <div class="contest__wrapper contest__wrapper--name">
             <div class="inner">
-            <ul class="contest__filters">
-              <li class="contest__filters-item">
-                <input class="contest__input" type="radio" name="apps" id="ios" checked>
-                <label class="contest__label" for="ios">Pink для iOS</label>
-              </li>
-              <li class="contest__filters-item">
-                <input class="contest__input" type="radio" name="apps" id="android">
-                <label class="contest__label" for="android">Pink на Android</label>
-              </li>
-              <li class="contest__filters-item">
-                <input class="contest__input" type="radio" name="apps" id="windows">
-                <label class="contest__label" for="windows">Windows Phone</label>
-              </li>
-            </ul>
+              <fieldset class="contest__fields contest__fields--primary">
+                  <ul class="contest__name-list">
+                    <li class="contest__name-item">
+                      <label class="contest__label contest__label--accent" for="surname">Фамилия:</label>
+                      <input class="contest__input" id="surname" type="text" name="surname" placeholder="Укажите фамилию *">
+                    </li>
+                    <li class="contest__name-item">
+                      <label class="contest__label contest__label--accent" for="name">Имя:</label>
+                      <input class="contest__input" id="name" type="text" name="name" placeholder="Введите ваше имя *"></li>
+                    <li class="contest__name-item">
+                      <label class="contest__label contest__label--accent" for="middle-name">Отчество:</label>
+                      <input class="contest__input" id="middle-name" type="text" name="middle-name"
+                        placeholder="Ну и отчество тоже">
+                    </li>
+                  </ul>
+              </fieldset>
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="contest__fields contest__fields--primary">
-          <legend class="contest__legend inner">Опишите свои эмоции</legend>
+        <div class="contest__wrapper contest__wrapper--filters">
           <div class="inner">
-            <label class="visually-hidden" for="comment-field">Введите комментарий</label>
-            <textarea class="contest__textarea" name="comment" id="comment-field"
-              placeholder="Можно прям в красках, не стесняясь в выражениях">
-                </textarea>
+            <fieldset class="contest__fields">
+              <legend class="contest__legend">
+                Ваши безбашенные достижения в путешествии
+              </legend>
+                <ul class="contest__filters">
+                  <li class="contest__filters-item">
+                    <input class="contest__input" type="checkbox" name="achievements" id="selfi" checked>
+                    <label class="contest__label" for="selfi">Сделал селфи с акулой</label>
+                  </li>
+                  <li class="contest__filters-item">
+                    <input class="contest__input" type="checkbox" name="achievements" id="beach" checked>
+                    <label class="contest__label" for="beach">Обгорел на пляже</label>
+                  </li>
+                  <li class="contest__filters-item">
+                    <input class="contest__input" type="checkbox" name="achievements" id="chuck">
+                    <label class="contest__label" for="chuck">Видел Чака Норриса</label>
+                  </li>
+                  <li class="contest__filters-item">
+                    <input class="contest__input" type="checkbox" name="achievements" id="souvenirs">
+                    <label class="contest__label" for="souvenirs">Накупил сувениров</label>
+                  </li>
+                  <li class="contest__filters-item">
+                    <input class="contest__input" type="checkbox" name="achievements" id="tower" checked>
+                    <label class="contest__label" for="tower">Удержал башню</label>
+                  </li>
+                  <li class="contest__filters-item">
+                    <input class="contest__input" type="checkbox" name="achievements" id="hotel">
+                    <label class="contest__label" for="hotel">Разгромил отель</label>
+                  </li>
+                </ul>
+            </fieldset>
           </div>
-        </fieldset>
-        <div class="inner">
-          <button class="contest__form-button" type="submit">Отправить форму</button>
-          <p class="contest__form-notice">
-            <span class="contest__form-notice-star">*</span> — обязательные поля
-          </p>
+        </div>
+          <div class="contest__wrapper contest__wrapper--contacts">
+            <div class="inner">
+              <fieldset class="contest__fields contest__fields--contacts">
+                <legend class="contest__legend contest__legend--hidden">
+                  Контактная информация
+                </legend>
+                  <label class="contest__label contest__label--accent" for="tel">Номер
+                    телефона</label>
+                  <input class="contest__input" id="tel" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone-number"
+                    placeholder="Номер, пожалуйста" required>
+                  <label class="contest__label contest__label--accent" for="email">Адрес
+                    почты</label>
+                  <input class="contest__input" id="email" type="email" name="email" placeholder="Введите почту *" required>
+              </fieldset>
+            </div>
+          </div>
+        <div class="contest__wrapper contest__wrapper--apps">
+          <div class="inner">
+            <fieldset class="contest__fields">
+              <legend class="contest__legend">С каким приложением
+                путешествовали?</legend>
+                <ul class="contest__filters">
+                  <li class="contest__filters-item">
+                    <input class="contest__input" type="radio" name="apps" id="ios" checked>
+                    <label class="contest__label" for="ios">Pink для iOS</label>
+                  </li>
+                  <li class="contest__filters-item">
+                    <input class="contest__input" type="radio" name="apps" id="android">
+                    <label class="contest__label" for="android">Pink на Android</label>
+                  </li>
+                  <li class="contest__filters-item">
+                    <input class="contest__input" type="radio" name="apps" id="windows">
+                    <label class="contest__label" for="windows">Windows Phone</label>
+                  </li>
+                </ul>
+            </fieldset>
+          </div>
+        </div>
+          <div class="contest__wrapper contest__wrapper--comments">
+            <div class="inner">
+              <fieldset class="contest__fields">
+                <legend class="contest__legend">Опишите свои эмоции</legend>
+                  <label class="visually-hidden" for="comment-field">Введите комментарий</label>
+                  <textarea class="contest__textarea" name="comment" id="comment-field"
+                    placeholder="Можно прям в красках, не стесняясь в выражениях">
+                      </textarea>
+              </fieldset>
+            </div>
+          </div>
+        <div class="contest__wrapper contest__wrapper--submit">
+          <div class="inner">
+            <button class="contest__form-button" type="submit">Отправить форму</button>
+            <p class="contest__form-notice">
+              <span class="contest__form-notice-star">*</span> — обязательные поля
+            </p>
+          </div>
         </div>
       </form>
     </section>
@@ -220,9 +237,9 @@
           <li class="footer__social-item">
             <a class="footer__social-link footer__social-link--youtube" href="" aria-label="«Пинк» на
             Youtube">
-              <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14.64px" height="13.96px"
-                viewBox="0 0 14.64 13.96" enable-background="new 0 0 14.64 13.96" xml:space="preserve">
+              <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="14.64px" height="13.96px" viewBox="0 0 14.64 13.96"
+                enable-background="new 0 0 14.64 13.96" xml:space="preserve">
                 <path
                   d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z" />
               </svg>
@@ -234,10 +251,9 @@
         <span class="footer__copyright-text">Разработано</span>
         <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"
           aria-label="Переход на страницу HTML Academy">
-          <svg class="footer__copyright-icon" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09"
-            xml:space="preserve">
+          <svg class="footer__copyright-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px"
+            viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
             <path
               d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787 l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65 l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036 v10.02L13.472,31.85L1.925,24.979V15.127z" />
           </svg>

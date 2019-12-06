@@ -1,22 +1,24 @@
 .inner {
+  .mobile-paddings();
   width: @breakpoint-mobile;
-  padding: @mobile-paddings;
   box-sizing: border-box;
   margin: 0 auto;
 }
 
 @media (min-width: @breakpoint-tablet) {
   .inner {
+    .tablet-paddings();
     width: @breakpoint-tablet;
-    padding: @tablet-paddings;
+    margin: 0 auto;
     box-sizing: border-box;
   }
 }
 
 @media (min-width: @breakpoint-desktop) {
   .inner {
+    .desktop-paddings();
     width: @breakpoint-desktop;
-    padding: @desktop-paddings;
+    margin: 0 auto;
     box-sizing: border-box;
   }
 }

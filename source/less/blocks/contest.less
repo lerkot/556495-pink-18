@@ -4,6 +4,7 @@
 }
 
 .contest__form-lead {
+  .paragraph-reset();
   font-size: @fs-base;
   font-weight: @fw-regular;
   line-height: @lh-big;
@@ -21,6 +22,15 @@
   }
 }
 
+.contest__wrapper {
+  margin-bottom: 30px;
+}
+
+.contest__wrapper--filters,
+.contest__wrapper--apps {
+  background-color: @block-bg-color;
+}
+
 .contest__fields {
   margin: 0;
   padding: 0;
@@ -31,38 +41,77 @@
 
 @media (min-width: @breakpoint-tablet) {
   .contest__fields {
-    width: 100%;
+    border: @border-input @border-color;
+  }
+
+  .contest__fields--primary {
+    border: none;
+  }
+
+  .contest__fields--contacts {
+    padding: 50px 60px;
+    box-sizing: border-box;
   }
 }
 
-.contest__fields--secondary {
-  width: 100%;
-  background-color: @block-bg-color;
+.contest__wrapper--lead {
+  order: 1;
+}
+
+.contest__wrapper--name {
+  order: 2;
+}
+
+.contest__wrapper--filters {
+  order: 3;
+}
+
+.contest__wrapper--contacts {
+  order: 4;
+}
+
+.contest__wrapper--apps {
+  order: 5;
+}
+
+.contest__wrapper--comments {
+  order: 6;
+}
+
+.contest__wrapper--submit {
+  order: 7;
 }
 
 @media (min-width: @breakpoint-tablet) {
-  .contest__fields--secondary {
+  .contest__wrapper--filters {
+    order: 5;
+    background-color: @base-bg-color;
+  }
+
+  .contest__wrapper--apps {
+    order: 3;
     background-color: @base-bg-color;
   }
 }
 
-.contest__fields-inner {
-  display: flex;
-  flex-direction: column;
-}
-
 .contest__legend {
+  padding-left: 30px;
+  padding-right: 30px;
   font-size: @fs-base;
   font-weight: @fw-regular;
   line-height: @lh-small;
   text-transform: uppercase;
   color: @accent-color;
-  border: none;
+  text-align: center;
+}
+
+.contest__legend--hidden {
+  display: none;
 }
 
 @media (min-width: @breakpoint-tablet) {
-  .contest__legend {
-    border: @border-input @border-color;
+  .contest__legend--hidden {
+    display: block;
   }
 }
 
@@ -78,6 +127,10 @@
     align-items: center;
     margin-bottom: 55px;
   }
+
+  .contest__name-item:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .contest__input[type="text"],
@@ -85,6 +138,7 @@
 .contest__input[type="email"] {
   width: 100%;
   padding: 20px;
+  border: @border-input @border-color;
   box-sizing: border-box;
 }
 

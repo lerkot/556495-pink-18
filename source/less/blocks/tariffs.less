@@ -8,15 +8,22 @@
   position: absolute;
   top: -29px;
   content: "";
-  width: 100%;
+  width: 0;
   height: 0;
   border-left: 100vw solid transparent;
   border-bottom: 29px solid @block-bg-color;
 }
 
+@media (min-width: @breakpoint-tablet) {
+  .tariffs::before {
+    top: -55px;
+    border-left: 100vw solid transparent;
+    border-bottom: 55px solid @block-bg-color;
+  }
+}
+
 .tariffs__inner {
   overflow: hidden;
-  widows: 280px;
 }
 
 
