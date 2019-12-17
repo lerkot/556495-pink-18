@@ -99,27 +99,27 @@
                 Ваши безбашенные достижения в путешествии
               </legend>
               <ul class="contest__filters">
-                <li class="contest__filters-item">
+                <li class="contest__filters-item contest__filters-item--first">
                   <input class="contest__input" type="checkbox" name="achievements" id="selfi" checked>
                   <label class="contest__label" for="selfi">Сделал селфи с акулой</label>
                 </li>
-                <li class="contest__filters-item">
+                <li class="contest__filters-item contest__filters-item--second">
                   <input class="contest__input" type="checkbox" name="achievements" id="beach" checked>
                   <label class="contest__label" for="beach">Обгорел на пляже</label>
                 </li>
-                <li class="contest__filters-item">
+                <li class="contest__filters-item contest__filters-item--third">
                   <input class="contest__input" type="checkbox" name="achievements" id="chuck">
                   <label class="contest__label" for="chuck">Видел Чака Норриса</label>
                 </li>
-                <li class="contest__filters-item">
+                <li class="contest__filters-item contest__filters-item--fourth">
                   <input class="contest__input" type="checkbox" name="achievements" id="souvenirs">
                   <label class="contest__label" for="souvenirs">Накупил сувениров</label>
                 </li>
-                <li class="contest__filters-item">
+                <li class="contest__filters-item contest__filters-item--fivth">
                   <input class="contest__input" type="checkbox" name="achievements" id="tower" checked>
                   <label class="contest__label" for="tower">Удержал башню</label>
                 </li>
-                <li class="contest__filters-item">
+                <li class="contest__filters-item contest__filters-item--sixth">
                   <input class="contest__input" type="checkbox" name="achievements" id="hotel">
                   <label class="contest__label" for="hotel">Разгромил отель</label>
                 </li>
@@ -134,19 +134,19 @@
                 Контактная информация
               </legend>
               <ul class="contest__contacts-list">
-                <li class="contest__contacts-item">
+                <li class="contest__contacts-item contest__contacts-item--first">
                   <label class="contest__label contest__label--accent" for="tel">Номер
                     телефона</label>
                 </li>
-                <li class="contest__contacts-item contest__contacts-item--primary">
+                <li class="contest__contacts-item contest__contacts-item--second">
                   <input class="contest__input" id="tel" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                     name="phone-number" placeholder="Номер, пожалуйста" required>
                 </li>
-                <li class="contest__contacts-item contest__contacts-item--last">
+                <li class="contest__contacts-item contest__contacts-item--third">
                   <label class="contest__label contest__label--accent" for="email">Адрес
                     почты</label>
                 </li>
-                <li class="contest__contacts-item">
+                <li class="contest__contacts-item contest__contacts-item--last">
                   <input class="contest__input" id="email" type="email" name="email" placeholder="Введите почту *"
                     required>
                 </li>
@@ -181,7 +181,7 @@
             <fieldset class="contest__fields">
               <legend class="contest__legend">Опишите свои эмоции</legend>
               <label class="visually-hidden" for="comment-field">Введите комментарий</label>
-              <textarea class="contest__textarea" name="comment" id="comment-field" rows="10"
+              <textarea class="contest__textarea" name="comment" id="comment-field"
                 placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </fieldset>
           </div>
@@ -191,7 +191,8 @@
             <div class="contest__submit-wrapper">
               <button class="contest__form-button" type="submit">Отправить форму</button>
               <p class="contest__form-notice">
-                <span class="contest__form-notice-star">*</span> — обязательные поля
+                <span class="contest__form-notice-star">*</span> — обязательные <span
+                  class="contest__form-notice-hidden">для заполнения</span> поля
               </p>
             </div>
           </div>
