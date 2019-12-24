@@ -34,9 +34,32 @@
 
 
 .tariffs__inner {
+  min-width: 320px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 0 auto;
   overflow: hidden;
 }
 
+@media (min-width: @breakpoint-tablet) {
+  .tariffs__inner {
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 660px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .tariffs__inner {
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}
 
 .tariffs__list {
   width: 300%;
