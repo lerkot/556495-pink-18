@@ -8,8 +8,6 @@
   position: absolute;
   top: -29px;
   content: "";
-  width: 0;
-  height: 0;
   border-left: 100vw solid transparent;
   border-bottom: 29px solid @block-bg-color;
 }
@@ -19,8 +17,6 @@
     position: absolute;
     top: -55px;
     content: "";
-    width: 0;
-    height: 0;
     border-left: 100vw solid transparent;
     border-bottom: 55px solid @block-bg-color;
   }
@@ -31,12 +27,11 @@
     position: absolute;
     top: -55px;
     content: "";
-    width: 0;
-    height: 0;
     border-left: 100vw solid transparent;
     border-bottom: 55px solid @block-bg-color;
   }
 }
+
 
 .tariffs__inner {
   overflow: hidden;
@@ -46,12 +41,14 @@
 .tariffs__list {
   width: 300%;
   border-collapse: collapse;
+  transform: translate(-33%);
 }
 
 @media (min-width: @breakpoint-tablet) {
   .tariffs__list {
     width: 620px;
     border-collapse: collapse;
+    transform: none;
   }
 }
 
@@ -118,7 +115,7 @@
 
 @media (min-width: @breakpoint-tablet) {
   .tariffs__feature:nth-child(1) {
-    display: block;
+    display: table-cell;
     border-collapse: collapse;
   }
 }
