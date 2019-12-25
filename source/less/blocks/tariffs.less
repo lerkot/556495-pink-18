@@ -1,28 +1,108 @@
 .tariffs {
   position: relative;
   padding-top: 64px;
-  padding-bottom: 18px;
   background-color: @block-bg-color;
 }
-
 
 .tariffs::before {
   position: absolute;
   top: -29px;
   content: "";
-  width: 100%;
-  height: 0;
   border-left: 100vw solid transparent;
   border-bottom: 29px solid @block-bg-color;
 }
 
+@media (min-width: @breakpoint-tablet) {
+  .tariffs::before {
+    position: absolute;
+    top: -55px;
+    content: "";
+    border-left: 100vw solid transparent;
+    border-bottom: 55px solid @block-bg-color;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .tariffs::before {
+    position: absolute;
+    top: -55px;
+    content: "";
+    border-left: 100vw solid transparent;
+    border-bottom: 55px solid @block-bg-color;
+  }
+}
+
+
+.tariffs__inner {
+  min-width: 320px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .tariffs__inner {
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 660px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .tariffs__inner {
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}
 
 .tariffs__list {
+  width: 300%;
   border-collapse: collapse;
+  transform: translate(-33%);
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .tariffs__list {
+    width: 620px;
+    border-collapse: collapse;
+    transform: none;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .tariffs__list {
+    width: 942px;
+    border-collapse: collapse;
+  }
 }
 
 .tariffs__head {
+  min-height: 98px;
+  text-align: center;
   background-color: @secondary-bg-color;
+}
+
+.tariffs__head:first-child {
+  display: none;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .tariffs__head:first-child {
+    display: block;
+    background-color: transparent;
+  }
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .tariffs__hidden {
+    display: none;
+  }
 }
 
 .tariffs__value-name {
@@ -41,13 +121,32 @@
 }
 
 .tariffs__feature {
+  height: 60px;
   font-size: @fs-base;
   font-weight: @fw-regular;
   line-height: @lh-big;
   color: @main-color;
   text-transform: uppercase;
+  background-color: @base-bg-color;
+  border: @border-input @border-color;
+  box-sizing: border-box;
+}
+
+.tariffs__feature:nth-child(1) {
+  display: none;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .tariffs__feature:nth-child(1) {
+    display: table-cell;
+    border-collapse: collapse;
+  }
 }
 
 .tariffs__toggles {
   .lists-mixin();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
 }

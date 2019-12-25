@@ -1,5 +1,24 @@
 .inner {
-  width: 320px;
+  .mobile-paddings();
+  width: @breakpoint-mobile;
+  box-sizing: border-box;
   margin: 0 auto;
-  background-color: transparent;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .inner {
+    .tablet-paddings();
+    width: @breakpoint-tablet;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .inner {
+    .desktop-paddings();
+    width: @breakpoint-desktop;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
 }

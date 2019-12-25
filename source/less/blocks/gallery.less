@@ -1,12 +1,13 @@
 .gallery {
+  display: flex;
+  flex-direction: column;
   padding-top: 45px;
   padding-bottom: 45px;
   background-color: @base-bg-color;
 }
 
 .gallery__lead {
-  padding-left: 38px;
-  padding-right: 36px;
+  .paragraph-reset();
   text-align: center;
   font-size: @fs-base;
   font-weight: @fw-regular;
@@ -14,13 +15,82 @@
   color: @main-color;
 }
 
+@media (min-width: @breakpoint-tablet) {
+  .gallery__lead {
+    padding-top: 40px;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 80px;
+  }
+}
+
 .gallery__item {
-  padding-right: 20px;
-  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+
+@media (min-width: @breakpoint-tablet) {
+  .gallery__item {
+    display: inline-flex;
+    flex-direction: column;
+    width: 300px;
+    box-sizing: border-box;
+  }
+
+  .gallery__item--full {
+    width: 100%;
+  }
+}
+
+.gallery-item-image--full {
+  width: 100%;
+}
+
+.gallery__item-image {
+  margin-bottom: -7px;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .gallery__item-image {
+    width: 300px;
+  }
+
+  .gallery-item-image--full {
+    width: 100%;
+  }
 }
 
 .gallery__item-desc {
+  flex-grow: 1;
+  padding: 20px 18px;
   background-color: @block-bg-color;
+}
+
+.gallery__item-review {
+  margin: 0;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .gallery__item-review--full {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: stretch;
+    flex-wrap: wrap;
+  }
+
+  .gallery__item-time--full {
+    margin-left: 5px;
+  }
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .gallery__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .gallery__item-author {
@@ -38,9 +108,16 @@
 }
 
 .gallery__item-comment {
+  .paragraph-reset();
   font-size: @fs-base;
   font-weight: @fw-regular;
   line-height: @lh-normal;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .gallery__item-comment--full {
+    order: 1;
+  }
 }
 
 .gallery__item-reactions {

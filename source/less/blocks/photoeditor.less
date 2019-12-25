@@ -1,25 +1,110 @@
+.photoeditor__lead-wrapper {
+  background-color: @base-bg-color;
+}
+
+.photoeditor__wrapper {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: @block-bg-color;
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .photoeditor__wrapper--base-bg {
+    background-color: @base-bg-color;
+  }
+}
+
+
 .photoeditor__lead {
   font-size: @fs-base;
   font-weight: @fw-regular;
   line-height: @lh-big;
-  color: @secondary-color;
+  color: @main-color;
 }
 
 .photoeditor__form {
   background-color: @block-bg-color;
 }
 
-.photoeditor__filters {
-  border: none;
+
+@media (min-width: @breakpoint-tablet) {
+  .photoeditor__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+
+@media (min-width: @breakpoint-tablet) {
+  .photoeditor__form-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.photoeditor__form-filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .photoeditor__form-filters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.photoeditor__filters-list {
+  .lists-mixin();
+  display: flex;
+  flex-direction: row;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .photoeditor__filters-list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.photoeditor__ranges-list {
+  .lists-mixin();
+}
+
+
+.photoeditor__filter-range {
+  display: none;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .photoeditor__filter-range {
+    display: block;
+  }
+}
+
+.photoeditor__filter-range--visible {
+  display: block;
+}
+
+
+.photoeditor__form-actions {
+  display: flex;
+  flex-direction: column;
 }
 
 .photoeditor__action-button {
   .buttons-mixin();
+  padding: 10px;
   background-color: transparent;
   border: none;
 }
 
 .photoeditor__action-button--submit {
+  margin-bottom: 20px;
   color: @accent-color;
   border: @border-button @accent-color;
   border-radius: @border-radius;
