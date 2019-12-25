@@ -31,6 +31,8 @@
 
 @media (min-width: @breakpoint-tablet) {
   .gallery__item {
+    display: inline-flex;
+    flex-direction: column;
     width: 300px;
     box-sizing: border-box;
   }
@@ -59,6 +61,7 @@
 }
 
 .gallery__item-desc {
+  flex-grow: 1;
   padding: 20px 18px;
   background-color: @block-bg-color;
 }
@@ -78,10 +81,6 @@
 
   .gallery__item-time--full {
     margin-left: 5px;
-  }
-
-  .gallery__item-comment--full {
-    order: 1;
   }
 }
 
@@ -109,9 +108,16 @@
 }
 
 .gallery__item-comment {
+  .paragraph-reset();
   font-size: @fs-base;
   font-weight: @fw-regular;
   line-height: @lh-normal;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .gallery__item-comment--full {
+    order: 1;
+  }
 }
 
 .gallery__item-reactions {
