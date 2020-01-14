@@ -7,6 +7,7 @@
 @media (min-width: @breakpoint-tablet) {
   .tariffs {
     padding-top: 35px;
+    padding-bottom: 67px;
   }
 }
 
@@ -343,6 +344,12 @@
   min-height: 100px;
 }
 
+@media (min-width: @breakpoint-tablet) {
+  .tariffs__toggles {
+    display: none;
+  }
+}
+
 .tariffs__labels {
   display: flex;
   flex-direction: row;
@@ -352,6 +359,12 @@
   left: 0;
   bottom: 48px;
   width: 100%;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .tariffs__labels {
+    display: none;
+  }
 }
 
 .tariffs__input {
