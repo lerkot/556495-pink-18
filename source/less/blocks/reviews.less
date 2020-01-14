@@ -2,6 +2,12 @@
   margin-bottom: 100px;
 }
 
+@media (min-width: @breakpoint-desktop) {
+  .reviews {
+    margin-bottom: 111px;
+  }
+}
+
 .reviews__inner {
   position: relative;
   padding-top: 41px;
@@ -193,11 +199,13 @@
 @media (min-width: @breakpoint-tablet) {
   .reviews__author-profession {
     display: block;
+    margin-top: 5px;
   }
 }
 
 @media (min-width: @breakpoint-desktop) {
   .reviews__author-profession {
+    margin-top: 5px;
     font-size: @fs-subtitle;
   }
 }

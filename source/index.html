@@ -195,6 +195,7 @@
               <p class="tariffs__value-price">1,99 USD</p>
             </td>
             <td class="tariffs__head tariffs__head--popular">
+              <span class="tariffs__head-badge">хит</span>
               <b class="tariffs__value-name">Стандарт</b>
               <p class="tariffs__value-price">3,99 USD</p>
             </td>
@@ -260,13 +261,20 @@
         </table>
       </div>
       <div class="tariffs__toggles">
-        <input class="tariffs__input" type="radio" id="btn-1" name="slide-control">
-        <input class="tariffs__input tariffs__input--checked" type="radio" id="btn-2" name="slide-control" checked>
-        <input class="tariffs__input" type="radio" id="btn-3" name="slide-control">
-      </div>
-      <label class="tariffs__label" for="btn-1" aria-label="Выбрать другой тариф"></label>
-      <label class="tariffs__label" for="btn-2" aria-label="Выбрать другой тариф"></label>
-      <label class="tariffs__label" for="btn-3" aria-label="Выбрать другой тариф"></label>
+        <input class="tariffs__input tariffs__input--1" type="radio" name="tariffs-control" id="btn-1">
+        <input class="tariffs__input tariffs__input--2" type="radio" name="tariffs-control" id="btn-2" checked>
+        <input class="tariffs__input tariffs__input--3" type="radio" name="tariffs-control" id="btn-3">
+        <div class="tariffs__labels">
+          <label class="tariffs__label" for="btn-1">
+            <span class="visually-hidden">Выбрать другой тариф</span>
+          </label>
+          <label class="tariffs__label" for="btn-2">
+            <span class="visually-hidden">Выбрать другой тариф</span>
+          </label>
+          <label class="tariffs__label" for="btn-3">
+            <span class="visually-hidden">Выбрать другой тариф</span>
+          </label>
+        </div>
     </section>
     <section class="contacts">
       <div class="contacts__list-container inner">
