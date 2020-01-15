@@ -16,7 +16,8 @@
 
 @media (min-width: @breakpoint-desktop) {
   .contacts__list-container {
-    min-height: 367px;
+    padding-top: 65px;
+    padding-bottom: 0;
   }
 }
 
@@ -37,6 +38,16 @@
     font-size: 40px;
     font-weight: @fw-light;
     line-height: 45px;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .contacts__heading {
+    .heading-reset();
+    margin-bottom: 58px;
+    font-size: 50px;
+    font-weight: @fw-light;
+    line-height: 60px;
   }
 }
 
@@ -79,12 +90,19 @@
 @media (min-width: @breakpoint-desktop) {
   .contacts__item {
     width: 285px;
+    margin: 0;
+    margin-right: 20px;
+  }
+
+  .contacts__item:first-child {
+    margin-left: 0;
   }
 }
 
 @media (min-width: @breakpoint-desktop) {
   .contacts__item--last {
     order: 3;
+    margin-right: 0;
   }
 }
 
@@ -95,6 +113,12 @@
   line-height: @lh-small;
   font-weight: @fw-bold;
   color: @main-color;
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .contacts__item-title {
+    margin-bottom: 26px;
+  }
 }
 
 .contacts__item-tel {
@@ -132,6 +156,12 @@
   }
 }
 
+@media (min-width: @breakpoint-desktop) {
+  .contacts__item-address {
+    width: auto;
+  }
+}
+
 .contacts__map {
   position: relative;
 }
@@ -158,5 +188,11 @@
 @media (min-width: @breakpoint-tablet) {
   .contacts__map-body {
     min-height: 373px;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .contacts__map-body {
+    min-height: 521px;
   }
 }
