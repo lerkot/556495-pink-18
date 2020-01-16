@@ -20,15 +20,22 @@
 
 @media (min-width: @breakpoint-tablet) {
   .gallery__lead {
-    padding-top: 40px;
-    padding-left: 120px;
-    padding-right: 120px;
-    padding-bottom: 80px;
+    margin-bottom: 0;
+    padding-top: 47px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 76px;
+    font-size: @fs-subtitle;
+    line-height: @lh-big;
   }
 }
 
-.gallery__item:not(:last-child) {
+.gallery__item {
   margin-bottom: 20px;
+}
+
+.gallery__item:last-child {
+  margin-bottom: 0;
 }
 
 
@@ -37,11 +44,16 @@
     display: inline-flex;
     flex-direction: column;
     width: 300px;
+    margin-bottom: 50px;
     box-sizing: border-box;
   }
 
   .gallery__item--full {
     width: 100%;
+  }
+
+  .gallery__item:last-child {
+    margin-bottom: 50px;
   }
 }
 
@@ -70,6 +82,30 @@
   text-transform: uppercase;
 }
 
+@media (min-width: @breakpoint-tablet) {
+  .gallery__item-wrapper--full::before {
+    position: absolute;
+    top: 57px;
+    right: 20px;
+    content: "";
+    width: 140px;
+    height: 36px;
+    background-color: @accent-color;
+  }
+
+  .gallery__item-note {
+    position: absolute;
+    top: 63px;
+    right: 40px;
+    font-size: @fs-small-text;
+    line-height: @lh-normal;
+    color: @secondary-color;
+    font-weight: @fw-bold;
+    text-transform: uppercase;
+  }
+}
+
+
 .gallery-item-image--full {
   width: 100%;
 }
@@ -96,6 +132,15 @@
   background-color: @block-bg-color;
 }
 
+@media (min-width: @breakpoint-tablet) {
+  .gallery__item-desc {
+    padding-top: 24px;
+    padding-left: 27px;
+    padding-right: 9px;
+    padding-bottom: 20px;
+  }
+}
+
 .gallery__item-review {
   margin: 0;
 }
@@ -107,10 +152,6 @@
     justify-content: space-between;
     align-content: stretch;
     flex-wrap: wrap;
-  }
-
-  .gallery__item-time--full {
-    margin-left: 5px;
   }
 }
 
@@ -148,6 +189,7 @@
 @media (min-width: @breakpoint-tablet) {
   .gallery__item-comment--full {
     order: 1;
+    margin-bottom: 4px;
   }
 }
 
@@ -161,6 +203,12 @@
   text-transform: uppercase;
 }
 
+@media (min-width: @breakpoint-tablet) {
+  .gallery__item-reactions {
+    padding-right: 50px;
+  }
+}
+
 .gallery__item-reactions::before {
   position: absolute;
   top: 3px;
@@ -171,4 +219,18 @@
   background-image: url("../../img/icon-heart.svg");
   background-repeat: no-repeat;
   background-size: 13px 12px;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .gallery__item-reactions::before {
+    position: absolute;
+    top: 6px;
+    left: 137px;
+    content: "";
+    width: 15px;
+    height: 14px;
+    background-image: url("../../img/icon-heart.svg");
+    background-repeat: no-repeat;
+    background-size: 13px 12px;
+  }
 }
