@@ -5,17 +5,28 @@
   background-color: @base-bg-color;
 }
 
+@media (min-width: @breakpoint-tablet) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    padding: 35px 0;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .footer {
+    padding: 70px 0;
+  }
+}
+
 .footer--hidden {
   display: none;
 }
 
-@media (min-width: @breakpoint-tablet) {
-  .footer {
-    display: block;
-  }
-}
-
 .footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
@@ -23,22 +34,58 @@
 @media (min-width: @breakpoint-tablet) {
   .footer__inner {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 }
 
+.footer__logo-link {
+  margin-bottom: 34px;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .footer__logo-link {
+    display: block;
+    width: 150px;
+    margin-right: 72px;
+    margin-top: -7px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .footer__logo-link {
+    margin-right: 232px;
+  }
+}
+
 .footer__social {
-  margin-top: 34px;
-  margin-bottom: 20px;
+  margin-bottom: 37px;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .footer__social {
+    padding-top: 5px;
+    margin-bottom: 0;
+  }
 }
 
 .footer__social-list {
   .lists-mixin();
   display: flex;
-  justify-content: space-around;
-  width: 188px;
-  margin: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 175px;
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .footer__social-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 175px;
+  }
 }
 
 .footer__social-link {
@@ -48,16 +95,44 @@
   width: 50px;
   height: 50px;
   color: @accent-color;
-  border: @border-button rgba(@main-color, 0.3);
+  border: @border-button rgba(@main-color, 0.1);
   border-radius: 50%;
 }
 
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media (min-width: @breakpoint-tablet) {
+  .footer__copyright {
+    margin-left: auto;
+    padding-top: 7px;
+    display: flex;
+    align-items: center;
+  }
+}
+
 .footer__copyright-text {
-  margin-right: 11px;
+  margin-right: 15px;
   font-size: @fs-base;
   font-weight: @fw-regular;
   line-height: @lh-small;
   color: @main-color;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .footer__copyright-text {
+    font-size: @fs-subtitle;
+    line-height: @lh-small;
+  }
+}
+
+.footer__copyright-link {
+  display: block;
+  height: 34px;
 }
 
 .footer__copyright-icon {
