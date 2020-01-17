@@ -134,10 +134,18 @@
 
 @media (min-width: @breakpoint-tablet) {
   .gallery__item-desc {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 155px;
     padding-top: 24px;
     padding-left: 27px;
     padding-right: 9px;
     padding-bottom: 20px;
+  }
+
+  .gallery__item-desc--full {
+    min-height: 121px;
   }
 }
 
@@ -146,7 +154,7 @@
 }
 
 @media (min-width: @breakpoint-tablet) {
-  .gallery__item-review--full {
+  .gallery__item-review {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -165,6 +173,7 @@
 }
 
 .gallery__item-author {
+  .paragraph-reset();
   font-size: @fs-base;
   font-weight: @fw-bold;
   font-style: normal;
@@ -203,9 +212,20 @@
   text-transform: uppercase;
 }
 
+.gallery__item-reactions--full {
+  position: relative;
+}
+
 @media (min-width: @breakpoint-tablet) {
   .gallery__item-reactions {
+    display: block;
+    margin-top: auto;
     padding-right: 50px;
+    padding-left: 0;
+  }
+
+  .gallery__item-reactions--full {
+    padding-left: 31px;
   }
 }
 
@@ -223,6 +243,32 @@
 
 @media (min-width: @breakpoint-tablet) {
   .gallery__item-reactions::before {
+    position: absolute;
+    top: 4px;
+    left: 228px;
+    content: "";
+    width: 15px;
+    height: 14px;
+    background-image: url("../../img/icon-heart.svg");
+    background-repeat: no-repeat;
+    background-size: 13px 12px;
+  }
+}
+
+.gallery__item-reactions--full::before {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  content: "";
+  width: 15px;
+  height: 14px;
+  background-image: url("../../img/icon-heart.svg");
+  background-repeat: no-repeat;
+  background-size: 13px 12px;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .gallery__item-reactions--full::before {
     position: absolute;
     top: 6px;
     left: 137px;
