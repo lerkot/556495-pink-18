@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   padding-top: 45px;
-  padding-bottom: 45px;
+  padding-bottom: 0;
   background-color: @base-bg-color;
 }
 
@@ -49,14 +49,6 @@
   }
 }
 
-.gallery__item {
-  margin-bottom: 20px;
-}
-
-.gallery__item:last-child {
-  margin-bottom: 0;
-}
-
 
 @media (min-width: @breakpoint-tablet) {
   .gallery__item {
@@ -71,8 +63,9 @@
     width: 100%;
   }
 
+  .gallery__item:nth-child(3n+2),
   .gallery__item:last-child {
-    margin-bottom: 50px;
+    margin-bottom: 0;
   }
 }
 
