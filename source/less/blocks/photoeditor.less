@@ -6,7 +6,7 @@
 
 @media (min-width: @breakpoint-tablet) {
   .photoeditor__lead-wrapper {
-    padding-top: 65px;
+    padding-top: 45px;
     padding-bottom: 69px;
   }
 }
@@ -187,10 +187,32 @@
   color: @accent-color;
   border: @border-button @accent-color;
   border-radius: @border-radius;
+
+  &:hover,
+  &:focus {
+    color: @secondary-color;
+    background-color: @accent-color;
+  }
+
+  &:active {
+    color: rgba(@secondary-color, 0.3);
+  }
 }
 
 .photoeditor__action-button--reset {
   color: rgba(@main-color, 0.1);
   border: @border-button rgba(@main-color, 0.1);
   border-radius: @border-radius;
+
+  &:hover,
+  &:focus {
+    color: rgba(@main-color, 0.3);
+    border: @border-button rgba(@main-color, 0.3);
+  }
+
+  &:active {
+    color: rgba(@secondary-color, 0.3);
+    background-color: rgba(@main-color, 0.3);
+    border: @border-button rgba(@main-color, 0);
+  }
 }

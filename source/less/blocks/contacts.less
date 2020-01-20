@@ -135,6 +135,15 @@
 .contacts__item-email {
   .contacts-links-mixin();
   line-height: @lh-normal;
+
+  &:hover,
+  &:focus {
+    color: @main-color;
+  }
+
+  &:active {
+    color: rgba(@main-color, 0.3);
+  }
 }
 
 @media (min-width: @breakpoint-tablet) {
