@@ -1,3 +1,7 @@
+.contest {
+  padding-top: 45px;
+}
+
 .contest__form {
   display: flex;
   flex-direction: column;
@@ -39,10 +43,6 @@
   }
 }
 
-.contest__wrapper {
-  margin-bottom: 30px;
-}
-
 @media (min-width: @breakpoint-desktop) {
   .contest__wrapper--name,
   .contest__wrapper--apps {
@@ -62,7 +62,7 @@
 }
 
 .contest__fields {
-  margin: 0;
+  .paragraph-reset();
   border: none;
 }
 
@@ -85,14 +85,17 @@
 
 .contest__wrapper--lead {
   order: 1;
+  margin-bottom: 34px;
 }
 
 .contest__wrapper--name {
   order: 2;
+  margin-bottom: 42px;
 }
 
 .contest__wrapper--filters {
   order: 3;
+  padding-top: 38px;
 }
 
 .contest__wrapper--contacts {
@@ -176,6 +179,10 @@
   flex-direction: column;
 }
 
+.contest__filters-item {
+  margin-bottom: 52px;
+}
+
 .contest__filters-item--first {
   order: 1;
 }
@@ -227,6 +234,7 @@
 
 .contest__legend {
   margin: 0 auto;
+  margin-bottom: 43px;
   padding-left: 30px;
   padding-right: 30px;
   font-size: @fs-base;
@@ -277,9 +285,17 @@
 .contest__input[type="tel"],
 .contest__input[type="email"] {
   width: 100%;
+  margin-top: 5px;
+  margin-bottom: 17px;
   padding: 20px;
+  padding-top: 24px;
+  padding-bottom: 20px;
   border: @border-input @border-color;
   box-sizing: border-box;
+}
+
+.contest__input--name-last[type="text"] {
+  margin-bottom: 0;
 }
 
 .contest__input::placeholder {
@@ -345,6 +361,7 @@
 }
 
 .contest__label--accent {
+  margin-left: 22px;
   font-size: @fs-base;
   font-weight: @fw-regular;
   line-height: @lh-big;
@@ -358,6 +375,55 @@
     flex-direction: row;
     justify-content: space-between;
   }
+}
+
+.contest__label--filters {
+  position: relative;
+  display: block;
+  padding-left: 69px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.contest__input[type="checkbox"] + .contest__label--filters::before {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  content: "";
+  width: 39px;
+  height: 39px;
+  background-color: @base-bg-color;
+  border: @border-input @input-grey;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.contest__input[type="checkbox"]:hover + .contest__label--filters::before,
+.contest__input[type="checkbox"]:checked:hover + .contest__label--filters::before,
+.contest__input[type="checkbox"]:focus + .contest__label--filters::before,
+.contest__input[type="checkbox"]:checked:focus + .contest__label--filters::before {
+  border: @border-input @secondary-bg-color;
+}
+
+.contest__input[type="checkbox"]:active + .contest__label--filters::before,
+.contest__input[type="checkbox"]:checked:active + .contest__label--filters::before {
+  border: @border-input @accent-color;
+}
+
+
+.contest__input[type="checkbox"]:checked + .contest__label--filters::before {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  content: "";
+  width: 39px;
+  height: 39px;
+  background-image: url("../../img/icon-ye-input.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: @base-bg-color;
+  border: @border-input @input-grey;
+  box-sizing: border-box;
 }
 
 .contest__form-button {
