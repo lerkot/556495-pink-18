@@ -96,10 +96,13 @@
 .contest__wrapper--filters {
   order: 3;
   padding-top: 38px;
+  padding-bottom: 47px;
 }
 
 .contest__wrapper--contacts {
   order: 4;
+  padding-top: 32px;
+  padding-bottom: 25px;
 }
 
 .contest__contacts-item--first {
@@ -152,6 +155,7 @@
 
 .contest__wrapper--apps {
   order: 5;
+  padding-top: 38px;
 }
 
 .contest__wrapper--comments {
@@ -205,6 +209,7 @@
 
 .contest__filters-item--sixth {
   order: 6;
+  margin-bottom: 0;
 }
 
 @media (min-width: @breakpoint-desktop) {
@@ -243,6 +248,10 @@
   text-transform: uppercase;
   color: @accent-color;
   text-align: center;
+}
+
+.contest__legend--apps {
+  margin-bottom: 40px;
 }
 
 @media (min-width: @breakpoint-desktop) {
@@ -295,6 +304,10 @@
 }
 
 .contest__input--name-last[type="text"] {
+  margin-bottom: 0;
+}
+
+.contest__input--contacts-last[type="text"] {
   margin-bottom: 0;
 }
 
@@ -377,7 +390,8 @@
   }
 }
 
-.contest__label--filters {
+.contest__label--filters,
+.contest__label--apps {
   position: relative;
   display: block;
   padding-left: 69px;
@@ -424,6 +438,10 @@
   background-color: @base-bg-color;
   border: @border-input @input-grey;
   box-sizing: border-box;
+}
+
+.contest__filters-item--apps {
+  margin-bottom: 45px;
 }
 
 .contest__form-button {
