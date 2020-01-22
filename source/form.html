@@ -54,7 +54,7 @@
       </div>
     </div>
     <section class="intro">
-      <div class="intro__inner inner">
+      <div class="intro__inner inner intro__inner--contest">
         <h1 class="intro__heading">Конкурс на самое безбашенное путешествие с Пинк</h1>
       </div>
     </section>
@@ -81,16 +81,16 @@
             <fieldset class="contest__fields contest__fields--primary contest__fields--name">
               <ul class="contest__name-list">
                 <li class="contest__name-item">
-                  <label class="contest__label contest__label--accent" for="surname">Фамилия:</label>
+                  <label class="contest__label contest__label--accent contest__label--name" for="surname">Фамилия:</label>
                   <input class="contest__input contest__input--name" id="surname" type="text" name="surname"
                     placeholder="Укажите фамилию *">
                 </li>
                 <li class="contest__name-item">
-                  <label class="contest__label contest__label--accent" for="name">Имя:</label>
+                  <label class="contest__label contest__label--accent contest__label--name" for="name">Имя:</label>
                   <input class="contest__input contest__input--name" id="name" type="text" name="name"
                     placeholder="Введите ваше имя *"></li>
                 <li class="contest__name-item">
-                  <label class="contest__label contest__label--accent" for="middle-name">Отчество:</label>
+                  <label class="contest__label contest__label--accent contest__label--name" for="middle-name">Отчество:</label>
                   <input class="contest__input contest__input--name contest__input--name-last" id="middle-name" type="text" name="middle-name"
                     placeholder="Ну и отчество тоже">
                 </li>
@@ -98,10 +98,11 @@
             </fieldset>
           </div>
         </div>
+        <!--Закончила на стилизации этого элемента-->
         <div class="contest__wrapper contest__wrapper--filters">
           <div class="inner">
             <fieldset class="contest__fields">
-              <legend class="contest__legend">
+              <legend class="contest__legend contest__legend--filters">
                 Ваши безбашенные достижения в путешествии
               </legend>
               <ul class="contest__filters">
@@ -135,25 +136,25 @@
         </div>
         <div class="contest__wrapper contest__wrapper--contacts">
           <div class="inner">
-            <fieldset class="contest__fields">
+            <fieldset class="contest__fields contest__fields--contacts">
               <legend class="contest__legend contest__legend--hidden">
                 Контактная информация
               </legend>
               <ul class="contest__contacts-list">
                 <li class="contest__contacts-item contest__contacts-item--first">
-                  <label class="contest__label contest__label--accent" for="tel">Номер
+                  <label class="contest__label contest__label--accent contest__label--contacts" for="tel">Номер
                     телефона</label>
                 </li>
                 <li class="contest__contacts-item contest__contacts-item--second">
-                  <input class="contest__input" id="tel" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  <input class="contest__input contest__input--contacts" id="tel" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                     name="phone-number" placeholder="Номер, пожалуйста" required>
                 </li>
                 <li class="contest__contacts-item contest__contacts-item--third">
-                  <label class="contest__label contest__label--accent" for="email">Адрес
+                  <label class="contest__label contest__label--accent contest__label--contacts" for="email">Адрес
                     почты</label>
                 </li>
                 <li class="contest__contacts-item contest__contacts-item--last">
-                  <input class="contest__input contest__input--contacts-last" id="email" type="email" name="email" placeholder="Введите почту *"
+                  <input class="contest__input contest__input--contacts contest__input--contacts-last" id="email" type="email" name="email" placeholder="Введите почту *"
                     required>
                 </li>
               </ul>
@@ -184,7 +185,7 @@
         </div>
         <div class="contest__wrapper contest__wrapper--comments">
           <div class="inner">
-            <fieldset class="contest__fields">
+            <fieldset class="contest__fields contest__fields--comments">
               <legend class="contest__legend">Опишите свои эмоции</legend>
               <label class="visually-hidden" for="comment-field">Введите комментарий</label>
               <textarea class="contest__textarea" name="comment" id="comment-field"
@@ -195,7 +196,7 @@
         <div class="contest__wrapper contest__wrapper--submit">
           <div class="inner">
             <div class="contest__submit-wrapper">
-              <button class="contest__form-button" type="submit">Отправить форму</button>
+              <input class="contest__form-button" type="submit" value="Отправить форму">
               <p class="contest__form-notice">
                 <span class="contest__form-notice-star">*</span> — обязательные <span
                   class="contest__form-notice-hidden">для заполнения</span> поля
