@@ -1,0 +1,138 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 40px;
+  text-align: center;
+  background-color: @base-bg-color;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+  box-sizing: border-box;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .modal {
+    width: 460px;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .modal {
+    width: 780px;
+  }
+}
+
+.modal__heading {
+  .heading-reset();
+  margin-bottom: 26px;
+  font-size: @fs-subtitle;
+  font-weight: @fw-bold;
+  line-height: @lh-normal;
+  color: @caption-color;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .modal__heading {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.modal__text {
+  .paragraph-reset();
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 38px;
+  font-size: @fs-base;
+  line-height: @lh-normal;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .modal__text {
+    padding-right: 70px;
+    padding-left: 70px;
+    font-size: @fs-subtitle;
+    line-height: @lh-normal;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .modal__text {
+    padding-right: 195px;
+    padding-left: 195px;
+  }
+}
+
+.modal__container {
+  width: 100%;
+  padding-top: 48px;
+  padding-bottom: 52px;
+  background-color: @block-bg-color;
+}
+
+@media (max-width: @mobile-and-tablet-width-only) {
+  .modal__container--error {
+    padding-top: 0;
+    background-color: @base-bg-color;
+  }
+}
+
+.modal__button {
+  .buttons-mixin();
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  padding: 14px 44px;
+  font-family: @font-family;
+  font-size: @fs-subtitle;
+  font-weight: @fw-bold;
+  line-height: @lh-big;
+  color: @secondary-color;
+  text-transform: uppercase;
+  background-color: @button-bg-color;
+  border-radius: 3px;
+  border: @border-input @button-bg-color;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: @button-hover-bg-color;
+    border: @border-input @button-hover-bg-color;
+  }
+
+  &:active {
+    color: rgba(@secondary-color, 0.3);
+    background-color: @button-hover-bg-color;
+    border: @border-input @button-hover-bg-color;
+  }
+
+  &:disabled {
+    color: @secondary-color;
+    background-color: @border-color;
+    border: @border-input @border-color;
+    cursor: default;
+  }
+}
+
+.modal--error {
+  margin-bottom: 20px;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .modal__button {
+    width: 300px;
+    border: @border-input @button-bg-color;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .modal--success .modal__button {
+    width: 460px;
+    border: @border-input @button-bg-color;
+    box-sizing: border-box;
+  }
+}
