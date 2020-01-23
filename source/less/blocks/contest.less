@@ -109,6 +109,12 @@
   padding-bottom: 25px;
 }
 
+@media (min-width: @breakpoint-desktop) {
+  .contest__fields--contacts {
+    padding-bottom: 13px;
+  }
+}
+
 .contest__fields--apps {
   padding-bottom: 13px;
 }
@@ -132,6 +138,12 @@
 @media (min-width: @breakpoint-tablet) {
   .contest__fields--filters {
     padding-bottom: 53px;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .contest__fields--filters {
+    padding-bottom: 7px;
   }
 }
 
@@ -200,6 +212,54 @@
   order: 2;
 }
 
+@media (min-width: @breakpoint-desktop) {
+  .contest__contacts-item--second,
+  .contest__contacts-item--last {
+    position: relative;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .contest__contacts-item--second::before,
+  .contest__contacts-item--last::before {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: @border-color;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .contest__contacts-item--second::after {
+    position: absolute;
+    top: 27px;
+    right: 22px;
+    content: "";
+    width: 20px;
+    height: 19px;
+    background-image: url("../../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 19px;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .contest__contacts-item--last::after {
+    position: absolute;
+    top: 27px;
+    right: 22px;
+    content: "";
+    width: 20px;
+    height: 19px;
+    background-image: url("../../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 19px;
+  }
+}
+
 .contest__contacts-item--third {
   order: 3;
 }
@@ -231,7 +291,7 @@
   }
 
   .contest__contacts-item {
-    width: 371px;
+    width: 375px;
     box-sizing: border-box;
   }
 
@@ -545,6 +605,12 @@
   }
 }
 
+@media (min-width: @breakpoint-desktop) {
+  .contest__label--contacts {
+    margin-bottom: 0;
+  }
+}
+
 
 .contest__input--name,
 .contest__input--contacts {
@@ -565,12 +631,13 @@
 }
 
 @media (min-width: @breakpoint-desktop) {
-  .contest__input--contacts {
+  .contest__input--contacts[type="tel"],
+  .contest__input--contacts[type="email"] {
+    padding-right: 60px;
     margin-top: 5px;
     margin-bottom: 10px;
   }
 }
-
 
 @media (min-width: @breakpoint-tablet) {
   .contest__submit-wrapper {
@@ -598,11 +665,12 @@
   }
 }
 
-@media (min-width: @breakpoint-desktop) {
+@media (min-width: @breakpoint-tablet) {
   .contest__label--apps {
     padding-left: 133px;
   }
 }
+
 
 .contest__input[type="checkbox"] + .contest__label--filters::before {
   position: absolute;
