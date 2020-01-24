@@ -18,6 +18,7 @@
     flex-wrap: wrap;
     width: 960px;
     margin: 0 auto;
+    padding-bottom: 0;
   }
 }
 
@@ -144,6 +145,8 @@
 @media (min-width: @breakpoint-desktop) {
   .contest__fields--filters {
     padding-bottom: 7px;
+    padding-left: 58px;
+    padding-right: 58px;
   }
 }
 
@@ -159,6 +162,12 @@
     padding-left: 58px;
     padding-right: 58px;
     padding-bottom: 41px;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .contest__fields--comments {
+    padding-bottom: 35px;
   }
 }
 
@@ -341,6 +350,12 @@
   }
 }
 
+@media (min-width: @breakpoint-desktop) {
+  .contest__wrapper--submit {
+    margin-bottom: 0;
+  }
+}
+
 @media (min-width: @breakpoint-tablet) {
   .contest__wrapper--filters {
     order: 5;
@@ -408,6 +423,14 @@
 }
 
 @media (min-width: @breakpoint-desktop) {
+  .contest__filters-item--achievements {
+    min-width: 260px;
+    margin-bottom: 0;
+  }
+}
+
+
+@media (min-width: @breakpoint-desktop) {
   .contest__filters {
     display: flex;
     flex-direction: row;
@@ -431,6 +454,16 @@
     order: 5;
   }
 }
+
+@media (min-width: @breakpoint-desktop) {
+  .contest__filters--achievements {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 820px;
+  }
+}
+
 
 .contest__legend {
   margin: 0 auto;
@@ -671,6 +704,14 @@
   }
 }
 
+@media (min-width: @breakpoint-desktop) {
+  .contest__label--filters {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 52px;
+  }
+}
+
 
 .contest__input[type="checkbox"] + .contest__label--filters::before {
   position: absolute;
@@ -688,6 +729,14 @@
 @media (min-width: @breakpoint-tablet) {
   .contest__input[type="checkbox"] + .contest__label--filters::before {
     left: 58px;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .contest__input[type="checkbox"] + .contest__label--filters::before {
+    display: block;
+    top: -4px;
+    left: 0;
   }
 }
 
@@ -724,6 +773,14 @@
 @media (min-width: @breakpoint-tablet) {
   .contest__input[type="checkbox"]:checked + .contest__label--filters::before {
     left: 58px;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .contest__input[type="checkbox"]:checked + .contest__label--filters::before {
+    display: block;
+    top: -4px;
+    left: 0;
   }
 }
 
