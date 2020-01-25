@@ -1,9 +1,150 @@
+.reviews {
+  margin-bottom: 100px;
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .reviews {
+    margin-bottom: 111px;
+  }
+}
+
 .reviews__inner {
-  padding-top: 49px;
+  position: relative;
+  padding-top: 41px;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .reviews__inner {
+    padding-top: 33px;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .reviews__inner {
+    padding-top: 185px;
+  }
+}
+
+.reviews__toggle-1,
+.reviews__toggle-2,
+.reviews__toggle-3 {
+  display: none;
+}
+
+.reviews__toggle-labels {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: -25px;
+  width: 100%;
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .reviews__toggle-labels {
+    display: none;
+  }
+}
+
+.reviews__toggle-label {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  cursor: pointer;
+  margin: 0 10px;
+  border-radius: 50%;
+  background-color: rgba(@secondary-bg-color, 0.3);
+
+  &:hover,
+  &:focus {
+    background-color: rgba(@secondary-bg-color, 0.6);
+  }
+
+  &:active {
+    background-color: rgba(@secondary-bg-color, 0.1);
+  }
+}
+
+.reviews__toggle-1:checked ~ .reviews__toggle-labels label[for="btn1"],
+.reviews__toggle-2:checked ~ .reviews__toggle-labels label[for="btn2"],
+.reviews__toggle-3:checked ~ .reviews__toggle-labels label[for="btn3"] {
+  width: 6px;
+  height: 6px;
+  border: solid 3px @secondary-bg-color;
+  background-color: @base-bg-color;
+  box-sizing: content-box;
+}
+
+
+.reviews__slider {
+  overflow: hidden;
 }
 
 .reviews__list {
   .lists-mixin();
+  display: flex;
+  flex-direction: row;
+  width: 300%;
+  transition: all 0.5s;
+}
+
+.reviews__item {
+  width: 280px;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .reviews__item {
+    width: 620px;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .reviews__item {
+    width: 960px;
+    margin: 0 125px;
+  }
+}
+
+.reviews__toggle-1:checked ~ .reviews__slider .reviews__list {
+  transform: translate(0);
+}
+
+.reviews__toggle-2:checked ~ .reviews__slider .reviews__list {
+  transform: translate(-280px);
+}
+
+.reviews__toggle-3:checked ~ .reviews__slider .reviews__list {
+  transform: translate(-560px);
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .reviews__toggle-1:checked ~ .reviews__slider .reviews__list {
+    transform: translate(0);
+  }
+
+  .reviews__toggle-2:checked ~ .reviews__slider .reviews__list {
+    transform: translate(-620px);
+  }
+
+  .reviews__toggle-3:checked ~ .reviews__slider .reviews__list {
+    transform: translate(-1240px);
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .reviews__toggle-1:checked ~ .reviews__slider .reviews__list {
+    transform: translate(0);
+  }
+
+  .reviews__toggle-2:checked ~ .reviews__slider .reviews__list {
+    transform: translate(-960px);
+  }
+
+  .reviews__toggle-3:checked ~ .reviews__slider .reviews__list {
+    transform: translate(-1920px);
+  }
 }
 
 .reviews__content {
@@ -25,7 +166,7 @@
 @media (min-width: @breakpoint-tablet) {
   .reviews__author {
     order: 2;
-    margin-bottom: 30px;
+    margin-bottom: 23px;
     text-align: center;
   }
 }
@@ -39,6 +180,18 @@
   color: @caption-color;
 }
 
+@media (min-width: @breakpoint-tablet) {
+  .reviews__author-name {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .reviews__author-name {
+    font-size: @fs-main-heading;
+  }
+}
+
 .reviews__author-profession {
   display: none;
 }
@@ -46,12 +199,21 @@
 @media (min-width: @breakpoint-tablet) {
   .reviews__author-profession {
     display: block;
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .reviews__author-profession {
+    margin-top: 5px;
+    font-size: @fs-subtitle;
   }
 }
 
 .reviews__text {
   .paragraph-reset();
   margin-bottom: 20px;
+  margin-top: 13px;
   font-size: @fs-base;
   font-weight: @fw-regular;
   line-height: @lh-big;
@@ -59,9 +221,11 @@
   text-align: center;
 }
 
-.reviews__toggles {
-  .lists-mixin();
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 40px;
+@media (min-width: @breakpoint-tablet) {
+  .reviews__text {
+    .paragraph-reset();
+    margin-bottom: 35px;
+    font-size: @fs-subtitle;
+    line-height: @lh-big;
+  }
 }
