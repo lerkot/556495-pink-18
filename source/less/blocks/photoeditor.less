@@ -103,7 +103,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 16px;
-  padding-top: 107px;
+  padding-top: 33px;
   padding-bottom: 46px;
 }
 
@@ -144,6 +144,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   width: 240px;
 }
 
@@ -162,6 +163,23 @@
   user-select: none;
 }
 
+.photoeditor__filter + .photoeditor__filter-label {
+  color: rgba(@secondary-bg-color, 0.3);
+}
+
+.photoeditor__filter:checked + .photoeditor__filter-label {
+  color: rgb(@accent-color);
+}
+
+.photoeditor__filter:hover + .photoeditor__filter-label {
+  color: rgba(@secondary-bg-color, 0.5);
+}
+
+.photoeditor__filter:active + .photoeditor__filter-label,
+.photoeditor__filter:focus + .photoeditor__filter-label {
+  color: rgb(@accent-color);
+}
+
 
 .photoeditor__ranges-list {
   .lists-mixin();
@@ -169,13 +187,55 @@
 
 
 .photoeditor__filter-range {
+  position: relative;
   display: none;
 }
+
 
 @media (min-width: @breakpoint-tablet) {
   .photoeditor__filter-range {
     display: block;
   }
+}
+
+.photoeditor__filter-range + .photoeditor__filter-rangeLabel::before {
+  position: absolute;
+  top: 118px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  width: 242px;
+  height: 2px;
+  background-color: #283645;
+  background-repeat: no-repeat;
+}
+
+.photoeditor__filter-range + .photoeditor__filter-rangeLabel::after {
+  position: absolute;
+  top: 112px;
+  right: 48px;
+  content: "";
+  width: 14px;
+  height: 14px;
+  border: 2px solid @accent-color;
+  background-color: @block-bg-color;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.photoeditor__filter-range--active + .photoeditor__filter-rangeLabel::after,
+.photoeditor__filter-range:focus + .photoeditor__filter-rangeLabel::after {
+  position: absolute;
+  top: 112px;
+  right: 48px;
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: @accent-color;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  border-radius: 50%;
 }
 
 .photoeditor__filter-range--visible {
