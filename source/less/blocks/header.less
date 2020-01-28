@@ -194,19 +194,21 @@
   .mobile-paddings();
   margin: 0 auto;
   padding-top: 22px;
-  padding-bottom: 18px;
+  padding-bottom: 26px;
   box-sizing: border-box;
 }
 
 @media (min-width: @breakpoint-tablet) {
   .header__logo-wrapper {
     min-height: 110px;
+    padding-top: 27px;
   }
 }
 
 @media (min-width: @breakpoint-desktop) {
   .header__logo-wrapper {
     margin: 0;
+    padding-left: 0;
     background-color: transparent;
     box-shadow: none;
   }
@@ -224,26 +226,71 @@
   }
 }
 
-.header__logo-image {
-  width: 75px;
+.header__logo-link {
+  display: block;
   height: 22px;
-  color: @secondary-color;
-  fill: currentColor;
+  width: 75px;
+  font-size: 0;
 }
 
 @media (min-width: @breakpoint-tablet) {
-  .header__logo-image {
+  .header__logo-link {
     width: 147px;
     height: 40px;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .logo-pink-white-tablet,
+  .logo-pink-white-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .logo-pink-white-tablet {
+    display: block;
+  }
+
+  .logo-pink-white-mobile,
+  .logo-pink-white-desktop {
+    display: none;
   }
 }
 
 @media (min-width: @breakpoint-desktop) {
-  .header__logo-image {
-    width: 147px;
-    height: 40px;
+  .logo-pink-white-desktop {
+    display: block;
+  }
+
+  .logo-pink-white-mobile,
+  .logo-pink-white-tablet {
+    display: none;
   }
 }
+
+.logo-pink-white-desktop,
+.logo-pink-white-mobile,
+.logo-pink-white-tablet {
+  fill: @base-bg-color;
+}
+
+.header__logo-link[href]:hover .logo-pink-white-mobile,
+.header__logo-link[href]:focus .logo-pink-white-mobile,
+.header__logo-link[href]:hover .logo-pink-white-tablet,
+.header__logo-link[href]:focus .logo-pink-white-tablet,
+.header__logo-link[href]:hover .logo-pink-white-desktop,
+.header__logo-link[href]:focus .logo-pink-white-desktop {
+  fill: @accent-color;
+}
+
+.header__logo-link[href]:active .logo-pink-white-mobile,
+.header__logo-link[href]:active .logo-pink-white-tablet,
+.header__logo-link[href]:active .logo-pink-white-desktop {
+  fill: @base-bg-color;
+  opacity: 0.3;
+}
+
 
 @media (max-width: @mobile-and-tablet-width-only) {
   .header__nav {
