@@ -173,7 +173,17 @@
 
 .contacts__map {
   position: relative;
+  overflow-x: hidden;
+
+  @media (min-width: @breakpoint-tablet) {
+    overflow-x: hidden;
+  }
+
+  @media (min-width: @breakpoint-desktop) {
+    overflow-x: hidden;
+  }
 }
+
 
 .contacts__map::before {
   position: absolute;
@@ -181,10 +191,23 @@
   left: 0;
   content: "";
   width: 100%;
-  height: 208px;
+  min-height: 40px;
   background-image: url("../img/bg-triangle-white-footer.svg");
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .contacts__map::before {
+    min-height: 67px;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .contacts__map::before {
+    min-height: 125px;
+    transform: scaleX(1.2);
+  }
 }
 
 .contacts__map-body {
@@ -204,4 +227,8 @@
   .contacts__map-body {
     min-height: 521px;
   }
+}
+
+.contacts__map-image {
+  display: none;
 }

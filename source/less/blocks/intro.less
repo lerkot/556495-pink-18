@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   padding-top: 32px;
-  padding-bottom: 55px;
+  padding-bottom: 30px;
   box-sizing: border-box;
 }
 
@@ -28,19 +28,19 @@
   .intro__inner--index {
     align-items: flex-start;
     padding-top: 93px;
-    padding-bottom: 164px;
+    padding-bottom: 110px;
   }
 }
 
 @media (min-width: @breakpoint-desktop) {
   .intro__inner--index {
     padding-top: 109px;
-    padding-bottom: 93px;
+    padding-bottom: 122px;
   }
 }
 
 .intro__inner--photo-page {
-  padding-bottom: 83px;
+  padding-bottom: 82px;
 }
 
 @media (min-width: @breakpoint-tablet) {
@@ -55,6 +55,10 @@
     padding-left: 160px;
     padding-bottom: 101px;
   }
+}
+
+.intro__inner--contest {
+  padding-bottom: 54px;
 }
 
 @media (min-width: @breakpoint-tablet) {
@@ -93,7 +97,7 @@
     width: 205px;
     min-height: auto;
     margin-left: 46px;
-    margin-bottom: 0;
+    margin-bottom: 1px;
     font-size: 40px;
     font-weight: @fw-light;
     line-height: 48px;
@@ -105,7 +109,7 @@
   .intro__heading--index {
     width: 250px;
     margin-left: 26px;
-    margin-bottom: 20px;
+    margin-bottom: 21px;
     font-size: 50px;
     line-height: 60px;
   }
@@ -114,7 +118,7 @@
 .intro__app {
   min-height: 216px;
   padding-top: 29px;
-  padding-bottom: 29px;
+  padding-bottom: 0;
   text-align: center;
   box-sizing: border-box;
 }
@@ -126,11 +130,18 @@
   }
 }
 
+@media (min-width: @breakpoint-desktop) {
+  .intro__app {
+    padding-top: 30px;
+  }
+}
+
 .intro__app-download {
   .buttons-mixin();
   display: block;
   padding: 15px 10px;
-  margin-bottom: 20px;
+  padding-bottom: 16px;
+  margin-bottom: 32px;
   color: @secondary-color;
   background-color: transparent;
   border: @border-button @base-bg-color;
@@ -149,9 +160,17 @@
   }
 }
 
+@media (min-width: @breakpoint-tablet) {
+  .intro__app-download {
+    margin-bottom: 46px;
+  }
+}
+
 @media (min-width: @breakpoint-desktop) {
   .intro__app-download {
-    margin-bottom: 178px;
+    margin-bottom: 67px;
+    padding: 13px 10px;
+    padding-bottom: 15px;
     font-size: 21px;
     font-weight: @fw-bold;
     line-height: 21px;
@@ -160,11 +179,51 @@
 
 .intro__app-list {
   .lists-mixin();
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 209px;
+  margin-bottom: 22px;
+}
+
+@media (min-width: @breakpoint-tablet) {
+  .intro__app-list {
+    margin-bottom: 36px;
+  }
+}
+
+@media (min-width: @breakpoint-desktop) {
+  .intro__app-list {
+    margin-bottom: 55px;
+  }
 }
 
 .intro__app-link {
   display: block;
+  width: 47px;
+  height: 56px;
 }
+
+.intro__app-link--ios {
+  background-image: url("../img/logo-apple.svg");
+  background-repeat: no-repeat;
+  background-position: 1px 0;
+}
+
+.intro__app-link--android {
+  background-image: url("../img/logo-android.svg");
+  background-repeat: no-repeat;
+  background-position: 1px 8px;
+}
+
+.intro__app-link--windows {
+  background-image: url("../img/logo-microsoft.svg");
+  background-repeat: no-repeat;
+  background-position: 0 11px;
+}
+
 
 .intro__app-desc {
   .paragraph-reset();
