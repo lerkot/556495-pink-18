@@ -191,22 +191,24 @@
   left: 0;
   content: "";
   width: 100%;
-  min-height: 40px;
+  min-height: 75px;
   background-image: url("../img/bg-triangle-white-footer.svg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-position: top center;
+  background-size: 100% 34px;
 }
 
 @media (min-width: @breakpoint-tablet) {
   .contacts__map::before {
-    min-height: 67px;
+    min-height: 120px;
+    z-index: 2;
+    background-size: 100% 71px;
   }
 }
 
 @media (min-width: @breakpoint-desktop) {
   .contacts__map::before {
-    min-height: 125px;
-    transform: scaleX(1.2);
+    min-height: 93px;
   }
 }
 
